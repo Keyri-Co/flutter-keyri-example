@@ -92,10 +92,10 @@ packages:
     dependency: "direct main"
     description:
       name: keyri_v3
-      sha256: a8963fc3c6d5a5226398d0fda01af016a70d1f6948e604b2afc1d051eea8d508
+      sha256: e45d64aaec85dd1859ca9b2214fe8e8b90f2a4eb2a334636fd0415a1801226af
       url: "https://pub.dev"
     source: hosted
-    version: "1.4.0"
+    version: "1.4.2"
   lints:
     dependency: transitive
     description:

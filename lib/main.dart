@@ -34,7 +34,10 @@ class KeyriHomePage extends StatefulWidget {
 }
 
 class _KeyriHomePageState extends State<KeyriHomePage> {
-  Keyri keyri = Keyri(appKey, publicApiKey: publicApiKey, serviceEncryptionKey: serviceEncryptionKey, blockEmulatorDetection: true);
+  Keyri keyri = Keyri(appKey,
+      publicApiKey: publicApiKey,
+      serviceEncryptionKey: serviceEncryptionKey,
+      blockEmulatorDetection: true);
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +105,10 @@ class KeyriScannerAuthPage extends StatefulWidget {
 class _KeyriScannerAuthPageState extends State<KeyriScannerAuthPage> {
   bool _isLoading = false;
 
-  Keyri keyri = Keyri(appKey, publicApiKey: publicApiKey, serviceEncryptionKey: serviceEncryptionKey, blockEmulatorDetection: true);
+  Keyri keyri = Keyri(appKey,
+      publicApiKey: publicApiKey,
+      serviceEncryptionKey: serviceEncryptionKey,
+      blockEmulatorDetection: true);
 
   void onMobileScannerDetect(BarcodeCapture barcodes) {
     if (barcodes.barcodes.isNotEmpty && !_isLoading) {
@@ -139,10 +145,10 @@ class _KeyriScannerAuthPageState extends State<KeyriScannerAuthPage> {
             flex: 1,
             child: _isLoading
                 ? const Center(
-                child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [CircularProgressIndicator()]))
+                    child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [CircularProgressIndicator()]))
                 : MobileScanner(onDetect: onMobileScannerDetect),
           )
         ],
@@ -154,9 +160,9 @@ class _KeyriScannerAuthPageState extends State<KeyriScannerAuthPage> {
     keyri
         .initiateQrSession(sessionId, publicUserId: publicUserId)
         .then((session) => keyri
-        .initializeDefaultConfirmationScreen('Some payload')
-        .then((authResult) => _onAuthResult(authResult))
-        .catchError((error, stackTrace) => _onError(error.toString())))
+            .initializeDefaultConfirmationScreen('Some payload')
+            .then((authResult) => _onAuthResult(authResult))
+            .catchError((error, stackTrace) => _onError(error.toString())))
         .catchError((error, stackTrace) => _onError(error.toString()));
   }
 
