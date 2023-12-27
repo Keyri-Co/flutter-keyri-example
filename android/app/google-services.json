@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "493679529487",
+    "firebase_url": "https://keyri-7bee7.firebaseio.com",
+    "project_id": "keyri-7bee7",
+    "storage_bucket": "keyri-7bee7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493679529487:android:1e5a8af9c8dfa7a7f5dd7a",
+        "android_client_info": {
+          "package_name": "com.keyri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493679529487-9gegvgduus91j9hifk4iqq9vnmof7tgu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keyri",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "493679529487-hq50pj5s3d2dnshvq9sg8l412c8j1fa1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keyri",
+            "certificate_hash": "c81800d468166ccee27349d2e58a91648d9ace1b"
+          }
+        },
+        {
+          "client_id": "493679529487-114srtvmc8tvg8q3fo77roa9igmegucb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa_3p8y2OoaeKgDDyZN1fHXVtDYd2bM4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493679529487-114srtvmc8tvg8q3fo77roa9igmegucb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "493679529487-2ooddhrpg3mik1n4657nb02aut8odo29.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.keyri.keyri",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493679529487:android:75ca5ec21c8ee598f5dd7a",
+        "android_client_info": {
+          "package_name": "com.keyri.flutter_keyri_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493679529487-114srtvmc8tvg8q3fo77roa9igmegucb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa_3p8y2OoaeKgDDyZN1fHXVtDYd2bM4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493679529487-114srtvmc8tvg8q3fo77roa9igmegucb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "493679529487-2ooddhrpg3mik1n4657nb02aut8odo29.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.keyri.keyri",
+                "app_store_id": "123456789"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
