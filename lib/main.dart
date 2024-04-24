@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:keyri_v3/keyri.dart';
+import 'package:keyri_v3/keyri_detections_config.dart';
 import 'package:keyri_v3/keyri_fingerprint_event.dart';
 
 void main() {
@@ -35,7 +36,6 @@ class KeyriHomePage extends StatefulWidget {
 }
 
 class _KeyriHomePageState extends State<KeyriHomePage> {
-  EventType? _eventType = EventType.visits;
 
   @override
   Widget build(BuildContext context) {
@@ -91,21 +91,6 @@ class _KeyriHomePageState extends State<KeyriHomePage> {
                   ),
                 ),
               ),
-              DropdownButton<EventType>(
-                items: EventType.values
-                    .map<DropdownMenuItem<EventType>>((EventType value) {
-                  return DropdownMenuItem<EventType>(
-                    value: value,
-                    child: Text(value.name),
-                  );
-                }).toList(),
-                onChanged: (value) {
-                  setState(() {
-                    _eventType = value;
-                  });
-                },
-                value: _eventType,
-              ),
               button(_sendEvent, 'Send event'),
               button(_login, 'Login'),
               button(_register, 'Register'),
@@ -136,10 +121,10 @@ class _KeyriHomePageState extends State<KeyriHomePage> {
         serviceEncryptionKey = null;
       }
 
-      return Keyri(appKey,
+      return Keyri.primary(appKey,
           publicApiKey: publicApiKey,
           serviceEncryptionKey: serviceEncryptionKey,
-          blockEmulatorDetection: true);
+          detectionsConfig: KeyriDetectionsConfig());
     } else {
       _showMessage('App key is required!');
     }
@@ -290,7 +275,7 @@ class _KeyriHomePageState extends State<KeyriHomePage> {
     keyri
         .sendEvent(
         publicUserId: usernameController.text,
-        eventType: _eventType ?? EventType.visits,
+        eventType: EventType.visits(),
         success: true)
         .then((fingerprintEventResponse) => _showMessage("Event sent"))
         .catchError((error, stackTrace) => _processError(error));
